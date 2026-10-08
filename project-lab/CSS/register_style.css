@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+html, body {
+    background: linear-gradient(135deg, #001f3f 0%, #002b5c 50%, #001429 100%);
+    color: #333333;
+    margin: 0;
+    padding: 30px 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    min-height: 100vh;
+}
+
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 15px;
+}
+
+.card {
+    max-width: 540px;
+    width: 100%;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    border-top: 6px solid #ffcc00; /* Linia de accent Galben UVT */
+}
+
+.brand-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.uvt-logo {
+    max-width: 130px;
+    height: auto;
+    margin-bottom: 12px;
+}
+
+h1 {
+    color: #002b5c; /* Albastru UVT */
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.brand-header p {
+    color: #666666;
+    font-size: 13px;
+}
+
+.row {
+    margin-bottom: 16px;
+    text-align: left;
+}
+
+.row label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 13px;
+    color: #002b5c;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+    width: 100%;
+    border-radius: 8px;
+    border: 1.5px solid #e2e8f0;
+    background: #f8fafc;
+    color: #1e293b;
+    font-size: 13.5px;
+    padding: 10px 14px;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #002b5c;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(0, 43, 92, 0.15);
+    outline: none;
+}
+
+.two-col {
+    display: flex;
+    gap: 12px;
+}
+
+.two-col > div {
+    flex: 1;
+}
+
+.radio-group {
+    display: flex;
+    gap: 18px;
+    font-size: 13px;
+}
+
+.radio-group label {
+    font-weight: 500;
+    color: #475569;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.checkbox-grid {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.checkbox-grid label {
+    font-size: 12px;
+    background: #f1f5f9;
+    color: #334155;
+    padding: 6px 12px;
+    border-radius: 20px;
+    border: 1px solid #cbd5e1;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.checkbox-grid label:hover {
+    background: #e2e8f0;
+    border-color: #002b5c;
+}
+
+.actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.btn {
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 700;
+    border: none;
+    transition: transform 0.15s, background-color 0.2s;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn.primary {
+    background-color: #002b5c; /* Albastru UVT */
+    color: #ffffff;
+    flex: 2;
+}
+
+.btn.primary:hover {
+    background-color: #001f3f;
+}
+
+.btn.ghost {
+    background-color: #ffcc00; /* Galben UVT */
+    color: #002b5c;
+    flex: 1;
+}
+
+.btn.ghost:hover {
+    background-color: #e6b800;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 13px;
+    color: #64748b;
+}
+
+.login-link a {
+    color: #002b5c;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}

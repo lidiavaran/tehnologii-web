@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #f1f5f9;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Structura Header UVT */
+header {
+    background-color: #002b5c; /* Albastru UVT */
+    border-bottom: 4px solid #ffcc00; /* Galben UVT */
+    padding: 15px 0;
+    color: white;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-logo {
+    height: 40px;
+    width: auto;
+}
+
+header h1 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+header nav a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 4px 8px;
+    transition: color 0.2s;
+}
+
+header nav a:hover, header nav a.active {
+    color: #ffcc00; /* Galben UVT */
+}
+
+header nav a.logout-link {
+    color: #ef4444;
+}
+
+/* Container Principal */
+main {
+    width: 1000px;
+    margin: 0 auto;
+    flex: 1;
+    padding: 40px 0;
+}
+
+.columns {
+    display: flex;
+    gap: 24px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.column {
+    background-color: #ffffff;
+    padding: 28px;
+    border-radius: 12px;
+    width: 310px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.25s ease-in-out;
+    position: relative;
+}
+
+.column:hover {
+    transform: translateY(-6px);
+    border-color: #002b5c;
+    box-shadow: 0 12px 25px rgba(0, 43, 92, 0.12);
+}
+
+.badge {
+    align-self: flex-start;
+    background-color: #e0f2fe;
+    color: #002b5c;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+.column h2 {
+    margin-bottom: 10px;
+    color: #002b5c;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.column p {
+    margin-bottom: 24px;
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: #475569;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 6px;
+    background-color: #002b5c;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+    align-self: flex-start;
+    transition: background-color 0.2s;
+}
+
+.btn:hover {
+    background-color: #ffcc00;
+    color: #002b5c;
+}
+
+/* Footer UVT */
+footer {
+    background-color: #001a38;
+    color: #94a3b8;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 12px;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 4px 0;
+}
+
+footer a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+footer a:hover {
+    color: #ffcc00;
+}
+
+
+
+@media (max-width: 900px) {
+    main {
+        width: 90%;
+        max-width: 800px;
+    }
+    .columns {
+        justify-content: center;
+    }
+    .column {
+        width: 45%; 
+        min-width: 280px;
+    }
+}
+
+@media (max-width: 750px) {
+    main {
+        width: 100%;
+        padding: 20px 15px;
+    }
+    .columns {
+        flex-direction: column;
+        gap: 16px;
+        margin: 15px 0;
+    }
+    .column {
+        width: 100%; 
+    }
+    .header-content {
+        padding: 0 15px;
+    }
+    header nav {
+        flex-direction: column;
+        gap: 8px;
+        width: 100%;
+    }
+}

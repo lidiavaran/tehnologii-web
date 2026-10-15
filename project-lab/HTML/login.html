@@ -10,24 +10,23 @@
 <body>
     <div class="login-wrapper">
         <div class="login-container">
-            <!-- Partea stângă: Sigla Facultății de Informatică -->
             <div class="login-image">
                 <img src="../MEDIA/login.png" alt="Facultatea de Informatică UVT">
             </div>
 
             <div class="separator"></div>
 
-            <!-- Partea dreaptă: Formularul de autentificare -->
             <div class="login-form">
                 <h2>Autentificare</h2>
                 <p class="subtitle">Comunitatea de Tehnologii Web</p>
-                
-                <form action="home.html" method="get">
+
+
+                <form id="loginForm">
                     <div class="input-group">
-                        <input type="email" placeholder="Adresă Email (ex: student@e-uvt.ro)" required>
+                        <input type="email" id="email" placeholder="Adresă Email (ex: prenume.nume@e-uvt.ro)" required>
                     </div>
                     <div class="input-group">
-                        <input type="password" placeholder="Parolă" required>
+                        <input type="password" id="password" placeholder="Parolă" required>
                     </div>
                     <button type="submit" class="btn-login">Conectare</button>
                 </form>
@@ -38,5 +37,7 @@
             </div>
         </div>
     </div>
+
+    <script src="../JS/login_js.js"></script>
 </body>
 </html>

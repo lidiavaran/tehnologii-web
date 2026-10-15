@@ -7,22 +7,28 @@
 }
 
 html, body {
-    height: 100%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     background-color: #f1f5f9;
     font-family: 'Plus Jakarta Sans', sans-serif;
+    width: 100%;
+    overflow-x: hidden;
 }
 
-/* Structura Header UVT */
+/* Header UVT pe 100% din latimea ecranului */
 header {
+    width: 100%;
     background-color: #002b5c; /* Albastru UVT */
     border-bottom: 4px solid #ffcc00; /* Galben UVT */
-    padding: 15px 0;
+    padding: 20px 0;
     color: white;
 }
 
 .header-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -69,12 +75,13 @@ header nav a.logout-link {
     color: #ef4444;
 }
 
-/* Container Principal */
+/* Container Principal Centrat */
 main {
-    width: 1000px;
+    width: 100%;
+    max-width: 1000px;
     margin: 0 auto;
     flex: 1;
-    padding: 40px 0;
+    padding: 40px 20px;
 }
 
 .columns {
@@ -82,13 +89,16 @@ main {
     gap: 24px;
     margin: 20px 0;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .column {
     background-color: #ffffff;
     padding: 28px;
     border-radius: 12px;
-    width: 310px;
+    flex: 1;
+    min-width: 280px;
+    max-width: 320px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     border: 1px solid #e2e8f0;
     display: flex;
@@ -148,14 +158,21 @@ main {
     color: #002b5c;
 }
 
-/* Footer UVT */
+/* Footer UVT pe 100% din latimea ecranului */
 footer {
+    width: 100%;
     background-color: #001a38;
     color: #94a3b8;
     text-align: center;
     padding: 20px 0;
     font-size: 12px;
     margin-top: auto;
+}
+
+.footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 footer p {
@@ -172,25 +189,18 @@ footer a:hover {
     color: #ffcc00;
 }
 
-
-
+/* Regulile Responsive */
 @media (max-width: 900px) {
-    main {
-        width: 90%;
-        max-width: 800px;
-    }
     .columns {
         justify-content: center;
     }
     .column {
-        width: 45%; 
-        min-width: 280px;
+        max-width: 100%;
     }
 }
 
 @media (max-width: 750px) {
     main {
-        width: 100%;
         padding: 20px 15px;
     }
     .columns {
@@ -199,13 +209,14 @@ footer a:hover {
         margin: 15px 0;
     }
     .column {
-        width: 100%; 
+        width: 100%;
     }
     .header-content {
         padding: 0 15px;
     }
     header nav {
         flex-direction: column;
+        align-items: center;
         gap: 8px;
         width: 100%;
     }

@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: radial-gradient(circle at top, #002b5c, #00122e);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #f8fafc;
+}
+
+.chat-header {
+    width: 100%;
+    background-color: #001f3f;
+    border-bottom: 3px solid #ffcc00;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.chat-header h2 {
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.back-link {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.chat-wrapper {
+    width: 100%;
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-container {
+    width: 100%;
+    height: 420px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 16px 16px 0 0;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Stilizarea mesajelor */
+.message {
+    max-width: 80%;
+    padding: 12px 16px;
+    border-radius: 12px;
+    font-size: 14px;
+    line-height: 1.5;
+    word-wrap: break-word;
+}
+
+/* Mesajele Bot-ului */
+.message.bot {
+    align-self: flex-start;
+    background-color: #f1f5f9;
+    color: #0f172a;
+    border-left: 4px solid #002b5c;
+}
+
+/* Mesajele Utilizatorului */
+.message.user {
+    align-self: flex-end;
+    background-color: #002b5c;
+    color: #ffffff;
+    border-right: 4px solid #ffcc00;
+}
+
+/* Formularul de Trimis */
+#chat-form {
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 0 0 16px 16px;
+    padding: 10px;
+    border-top: 1px solid #e2e8f0;
+}
+
+#chat-form input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+}
+
+#chat-form input:focus {
+    border-color: #002b5c;
+}
+
+#chat-form button {
+    padding: 12px 20px;
+    margin-left: 10px;
+    background-color: #002b5c;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#chat-form button:hover {
+    background-color: #ffcc00;
+    color: #002b5c;
+}
